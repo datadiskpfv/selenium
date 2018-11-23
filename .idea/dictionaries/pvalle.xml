@@ -2,6 +2,7 @@
   <dictionary name="pvalle">
     <words>
       <w>chromedriver</w>
+      <w>firstname</w>
       <w>webdriver</w>
     </words>
   </dictionary>

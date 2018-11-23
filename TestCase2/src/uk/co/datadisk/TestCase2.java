@@ -29,7 +29,14 @@ public class TestCase2 {
         // Get and grab text from the web page, you can then check it
         System.out.println(cDriver.findElement(By.xpath("//div[@class='_5iyx']")).getText().contains("helps you connect and share"));
 
+        // use regular expression to find a changing element, first name on facebook changes id each refresh
+        cDriver.findElement(By.xpath("//input[contains(@id, 'u_0')]")).sendKeys("Hello");
+
         // click a link
         cDriver.findElement(By.linkText("Forgotten account?")).click();
+
+        // Xpath - options
+        // parent, following-sibling, li[2], text()
+
     }
 }
