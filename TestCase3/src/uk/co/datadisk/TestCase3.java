@@ -25,8 +25,5 @@ public class TestCase3 {
         //s.selectByValue("USD");
         //s.selectByIndex(3);
         s.selectByVisibleText("USD");
-
-        Select dep = new Select(cDriver.findElement(By.xpath("//input[@id='ctl00_mainContent_ddl_originStation1_CTXT']")));
-        dep.selectByValue("JLR");
     }
 }
