@@ -15,6 +15,7 @@ public class TestCase3 {
 
     public static void main(String[] args) {
 
+        // Had to increase the screen size as we get different drop downs
         ChromeOptions options = new ChromeOptions();
         options.addArguments("window-size=1200,800");
 
@@ -37,5 +38,13 @@ public class TestCase3 {
         // departure drop down
         cDriver.findElement(By.cssSelector("#ctl00_mainContent_ddl_originStation1_CTXT")).click();
         cDriver.findElement(By.xpath("//a[@value='GOI']")).click();
+        cDriver.findElement(By.xpath("(//a[@value='DEL'])[2]")).click();
+
+        cDriver.findElement((By.xpath("//div[@class='book']"))).click();
+
+        // checkboxes - check if select box is selected first
+        if(!cDriver.findElement(By.id("ctl00_mainContent_chk_IndArm")).isSelected()) {
+            cDriver.findElement(By.id("ctl00_mainContent_chk_IndArm")).click();
+        }
     }
 }
