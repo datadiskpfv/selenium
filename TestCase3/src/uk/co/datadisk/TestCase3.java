@@ -3,6 +3,8 @@ package uk.co.datadisk;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.Select;
 
 public class TestCase3 {
@@ -13,9 +15,15 @@ public class TestCase3 {
 
     public static void main(String[] args) {
 
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("window-size=1200,800");
+
+        DesiredCapabilities cap = DesiredCapabilities.chrome();
+        cap.setCapability(ChromeOptions.CAPABILITY, options);
+
         // SpiceJet drop box test
         System.setProperty("webdriver.chrome.driver","C:\\chromedriver_win32\\chromedriver.exe");
-        WebDriver cDriver =new ChromeDriver();
+        WebDriver cDriver =new ChromeDriver(cap);
         cDriver.get(BASE_URL);
 
         // select static drop down
@@ -25,5 +33,9 @@ public class TestCase3 {
         //s.selectByValue("USD");
         //s.selectByIndex(3);
         s.selectByVisibleText("USD");
+
+        // departure drop down
+        cDriver.findElement(By.cssSelector("#ctl00_mainContent_ddl_originStation1_CTXT")).click();
+        cDriver.findElement(By.xpath("//a[@value='GOI']")).click();
     }
 }
