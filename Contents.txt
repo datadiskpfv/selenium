@@ -1,0 +1,5 @@
+Test Case 1:    Basic Google Chrome Test
+Test Case 2:    Finding an element and enter data into it
+Test Case 3:    Finding an element and enter data into it using spice jet website
+Test Case 4:    Selecting a Javascript popup and accepting
+Test Case 5:    Handling validation on forms
