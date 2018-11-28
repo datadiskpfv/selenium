@@ -10,7 +10,7 @@ public class TestCase5 {
 
     static final String BASE_URL = "https://www.makemytrip.com";
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
 
         // SpiceJet drop box test
         System.setProperty("webdriver.chrome.driver","C:\\chromedriver_win32\\chromedriver.exe");
@@ -22,6 +22,17 @@ public class TestCase5 {
 
         cDriver.findElement(By.xpath("//label[contains(text(),'multi-city')]")).click();
         System.out.println(cDriver.findElement(By.xpath("//input[@id='hp-widget__return']")).isDisplayed());
+
+        cDriver.findElement(By.xpath("//input[@id='hp-widget__depart']")).click();
+
+        // need a sleep due to popup taking a bit of time to load
+        Thread.sleep(1000L);
+
+        // you can get first of second elements for a specific date (text)
+        // cDriver.findElement(By.linkText("29")).click();          // first 29
+        cDriver.findElements(By.linkText("29")).get(1).click();     // second 29
+
+
 
     }
 }
