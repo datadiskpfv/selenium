@@ -27,5 +27,8 @@ public class TestCase8 {
         List<String> windowsList = new ArrayList<>(cDriver.getWindowHandles());
         cDriver.switchTo().window(windowsList.get(1));
         System.out.println(cDriver.getTitle());
+
+        cDriver.switchTo().window(windowsList.get(0));
+        System.out.println(cDriver.getTitle());
     }
 }
