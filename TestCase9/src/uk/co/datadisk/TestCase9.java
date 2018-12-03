@@ -31,5 +31,8 @@ public class TestCase9 {
         WebElement destination_box = cDriver.findElement(By.id("droppable"));
 
         actions.dragAndDrop(source_box, destination_box).build().perform();
+
+        // switch back to default window (frame)
+        cDriver.switchTo().defaultContent();
     }
 }

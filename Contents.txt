@@ -4,6 +4,6 @@ Test Case 3:    Finding an element and enter data into it using spice jet websit
 Test Case 4:    Selecting a Javascript popup and accepting
 Test Case 5:    Handling validation on forms, find multiple text elements and select a specific one
 Test Case 6:    Implicit and Explicit waits
-Test Case 7:    Actions (mouseover, double click etc)
-Test Case 8:    Multiple Windows and selecting a specific one
-Test Case 9:    Frames and Drag/Drop
+Test Case 7:    Actions - mouseover, double click
+Test Case 8:    Actions - Multiple Windows and selecting a specific one
+Test Case 9:    Actions - Frames and Drag/Drop
