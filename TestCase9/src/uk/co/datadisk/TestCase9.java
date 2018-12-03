@@ -19,6 +19,8 @@ public class TestCase9 {
         cDriver.get(BASE_URL);
 
         // Identify the Frame
+        System.out.println("Number of Frames: " + cDriver.findElements(By.tagName("iframe")).size());
+
         cDriver.switchTo().frame(cDriver.findElement(By.className("demo-frame")));
         cDriver.findElement(By.id("draggable")).click();
 
