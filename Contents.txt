@@ -8,3 +8,4 @@ Test Case 7:    Actions - mouseover, double click
 Test Case 8:    Actions - Multiple Windows and selecting a specific one
 Test Case 9:    Actions - Frames and Drag/Drop
 Test Case 10:   Limiting web driver scope
+Test Case 11:   Calendars
