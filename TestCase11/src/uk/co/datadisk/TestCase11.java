@@ -22,9 +22,8 @@ public class TestCase11 {
 
         // get the travel date element
         cDriver.findElement(By.cssSelector("#travel_date")).click();
-        List<WebElement> dates = cDriver.findElements(By.className("day"));
-        System.out.println("Number of Dates: " + dates.size() + "\n");
 
+        // Change the Month and Year
         WebElement datepickerDays = cDriver.findElement(By.className("datepicker-days"));
         WebElement datepickerSwitch = datepickerDays.findElement(By.className("datepicker-switch"));
         WebElement nextMonth = datepickerDays.findElement(By.className("next"));
@@ -33,16 +32,19 @@ public class TestCase11 {
             nextMonth.click();
         }
 
+        // Get the dates for that Month and Year
+        List<WebElement> dates = cDriver.findElements(By.className("day"));
+        System.out.println("Number of Dates: " + dates.size() + "\n");
 
         // get all dates and loop through until you find a date that you need
-//        System.out.println("List Dates");
-//        System.out.println("==============================");
-//        for (int i = 0; i < dates.size(); i++) {
-//            System.out.println(dates.get(i).getText());
-//            if(dates.get(i).getText().equals("23")){
-//                dates.get(i).click();
-//                break;
-//            }
-//        }
+        System.out.println("List Dates");
+        System.out.println("==============================");
+        for (int i = 0; i < dates.size(); i++) {
+            System.out.println(dates.get(i).getText());
+            if(dates.get(i).getText().equals("23")){
+                dates.get(i).click();
+                break;
+            }
+        }
     }
 }
