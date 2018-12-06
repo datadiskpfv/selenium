@@ -11,3 +11,5 @@ Test Case 10:   Limiting web driver scope
 Test Case 11:   Calendars
 Test Case 12:   Drop downs with search, also use the JavascriptExecutor
 Test Case 13:   Get cricket scores and add each player runs to find total runs
+Test Case 14:   Handling HTTPS certificates
+Test Case 15:   Maximize window and delete cookies
